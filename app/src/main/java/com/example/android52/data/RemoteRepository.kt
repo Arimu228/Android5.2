@@ -33,3 +33,4 @@ class RemoteRepository {
 // git add .  - проиндексировать все изменения
 
 // git push -u origin master
+cond
