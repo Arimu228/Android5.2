@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="350dp"
+        android:layout_height="279dp"
+        android:layout_gravity="center"
+        android:background="@color/purple_200" />
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/gay"
+        android:textSize="50sp"
+        android:text="text" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="70dp"
+        android:textColor="@color/black"
+        android:textSize="50sp" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="65dp"/>
+
+
+</FrameLayout>
