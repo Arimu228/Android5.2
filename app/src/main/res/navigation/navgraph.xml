@@ -9,7 +9,7 @@
         android:id="@+id/characterFragment"
         android:name="com.example.android52.ui.CharacterFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" >
+        tools:layout="@layout/fragment_character" >
         <action
             android:id="@+id/action_characterFragment_to_characterDetailFragment"
             app:destination="@id/characterDetailFragment" />

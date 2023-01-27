@@ -24,4 +24,12 @@ class RemoteRepository {
     }
 }
 
+//git init   - создание локального git репозиотрия
 
+// git commit -m "Second commit"
+
+// git status - печатает текущие изменения в проекте
+
+// git add .  - проиндексировать все изменения
+
+// git push -u origin master

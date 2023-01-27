@@ -3,4 +3,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="filter_by_name">Filter by name...</string>
+    <string name="location" />
+    <string name="type" />
+    <string name="specie" />
+    <string name="origin" />
+    <string name="status" />
+    <string name="gender" />
+    <string name="rick_sanchez" />
+    <string name="go_back2" />
 </resources>

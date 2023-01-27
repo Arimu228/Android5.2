@@ -1,40 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.CharacterFragment">
-
-    <View
-        android:id="@+id/rick_and_morty"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center|top"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/pngitem" />
-
-    <View
-        android:id="@+id/black_line"
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_marginTop="47dp"
-        android:background="@color/black" />
 
     <View
         android:id="@+id/logo"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_margin="4dp"
-        android:background="@drawable/logo" />
+        android:layout_marginStart="20dp"
+        android:background="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/black_line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <View
+        android:id="@+id/rick_and_morty"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/pngitem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/black_line" />
 
     <EditText
         android:id="@+id/et_name"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="160dp"
-        android:hint="@string/filter_by_name" />
+        android:layout_marginBottom="20dp"
+        android:hint="@string/filter_by_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rick_and_morty" />
 
 
     <Button
@@ -42,35 +54,30 @@
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="90dp" />
-
-    <!--    <androidx.recyclerview.widget.RecyclerView-->
-    <!--        android:id="@+id/rv_main"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="370dp"-->
-    <!--        android:layout_gravity="bottom"-->
-    <!--        tools:listitem="@layout/item_character"-->
-    <!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />-->
-
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_name" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
-        android:layout_width="match_parent"
-        android:layout_height="370dp"
-        android:layout_gravity="bottom"
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_search"
         tools:listitem="@layout/item_character" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/purple_200"
-        android:src="@drawable/ic_baseline_arrow_forward_24"
-        android:tint="@color/white" />
+        android:id="@+id/fabNext"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_marginBaseline="30dp" />
 
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
