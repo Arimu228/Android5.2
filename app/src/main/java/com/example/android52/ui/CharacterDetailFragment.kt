@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.android52.R
 import com.example.android52.databinding.FragmentSecondBinding
+import com.example.rickandmorty3.extencion.glide
 
 
 class CharacterDetailFragment : Fragment() {
@@ -39,7 +40,7 @@ class CharacterDetailFragment : Fragment() {
             binding.tvOrigin2.text = result.origin.name
             binding.tvType2.text = result.type
             binding.tvLocation2.text =result.location.name
-//            binding.imageView.glide(result.image)
+            binding.imageView.glide(result.image)
         }}
     private fun initViews() {
         binding.tvGoBack.setOnClickListener {

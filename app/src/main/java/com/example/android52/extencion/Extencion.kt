@@ -6,10 +6,10 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
-import com.example.rickandmorty3.R
+import com.example.android52.R
 
 fun View.glide(url: String){
-    Glide.with(this).load(url).placeholder(R.drawable.rick).circleCrop().into(this as ImageView)
+    Glide.with(this).load(url).placeholder(R.drawable.ic_launcher_background).circleCrop().into(this as ImageView)
 }
 fun Fragment.makeToast(text:String){
     Toast.makeText(requireContext(),text, Toast.LENGTH_SHORT).show()

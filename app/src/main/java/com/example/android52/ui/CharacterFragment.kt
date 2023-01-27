@@ -1,6 +1,8 @@
 package com.example.android52.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -26,10 +28,9 @@ class CharacterFragment : Fragment() {
         binding= FragmentCharacterBinding.inflate(LayoutInflater.from(context),container,false)
         getCharacters()
         listener()
-
+        refreshLayout()
         return binding.root
     }
-
     private fun listener() {
         binding.fabNext.setOnClickListener {
             getCharacters()
@@ -37,10 +38,7 @@ class CharacterFragment : Fragment() {
 
         }
     }
-
 //    swipeRefreshLayout
-
-
     private fun getCharacters() {
         repository.getCharacters(page,this::onSuccess, this::onFailure)
     }
@@ -59,6 +57,21 @@ class CharacterFragment : Fragment() {
 
     private fun onFailure(message: String) {
         Log.e("olo", "onFailure: $message")
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private fun refreshLayout() {
+        binding.swipeRefresh.setOnRefreshListener {
+            getCharacters()
+            ++page
+            (Handler()).postDelayed({ binding.swipeRefresh.isRefreshing = false }, 5000)
+            binding.swipeRefresh.setColorSchemeResources(
+                R.color.blue_dark,
+                R.color.orange,
+                R.color.purple_200,
+                R.color.black
+            )
+        }
     }
 
 
